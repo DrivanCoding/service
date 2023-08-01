@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding:0px;
+            font-family: Calibri;
+        }
+        body{
+            background-color: rgb(220, 219, 219);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 5vh;
+        }
+        .allcontent{
+            background-color: white;
+            width: 80vw;
+            height: 90vh;
+            box-shadow: 0px 0px 14px 2px rgb(205, 205, 205) ;
+            display: flex;
+            justify-content: center;
+        }
+        .form{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form .tilte{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 30%;
+         height: 14%;
+         position: absolute;
+         top: 1px;
+         left: 12px;
+         font-weight: bold;
+         
+        }
+        .form .tilte span{
+            text-align: center;
+            margin: 2px;
+            
+        }
+        .form .form_items .title span{
+            color: grey;
+            margin-left: 5px;
+
+        }
+        .form .form_items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form .form_items .btnG button{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background: rgb(253, 253, 253);
+           border: solid 1px rgb(236, 236, 236);
+           border-radius: 5px;
+           font-weight: bold;
+           width: 20vw;
+           margin: 30px;
+        }
+        .form .form_items .btnG button span{
+            margin: 4px;
+        }
+        .form .form_items .btnG button span img{
+            width: 25PX;
+            height: 25px;
+        }
+        .form .form_items .separ{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 17px;
+        }
+        .form .form_items .separ span{
+            position: absolute;
+            text-align: center;
+            background: white;
+            width: 25px;
+        }
+        .form .form_items .separ p{
+            width: 10vw;
+            border: solid 1px rgb(241, 241, 241);
+        }
+        .form .form_items .form_item form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .form .form_items .form_item form input[type="email"],input[type="password"] {
+          width: 20vw;
+          height: 6vh;
+          font-size: 12px;
+          margin: 5px;
+          border: none;
+          border-bottom: solid 2px gainsboro;
+        }
+        .form .form_items .form_item form input[type="email"]:focus,input[type="password"]:focus{
+            outline: none;
+        }
+        .form .form_items .form_item form .formplus{
+            width: 20vw;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 5px;
+        }
+        .form .form_items .form_item form .formplus a{
+            color: black;
+        }
+        .form .form_items .form_item form .formbtn{
+            margin-top: 25px;
+        }
+        .form .form_items .form_item form .formbtn button{
+            width: 20vw;
+            height: 7vh;
+            border: none;
+            border-radius: 7px;
+            background: black;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 1s;
+        }
+        .form .form_items .form_item form .formbtn button:hover{
+            background: white;
+            color: black;
+            border: solid 1px black;
+        }
+        .form .form_items .form_item form .sign{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .form .form_items .form_item form .sign span h4{
+            color: gray;
+            padding: 2px;
+        }
+        .silder{
+            color: white;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background: linear-gradient(rgba(84, 30, 30, 0.206),rgba(36, 36, 36, 0.68)), url("font2.jpeg");
+            background-position-x: 71%;
+            background-position-y: 22%;
+        }
+        .silder .info{
+            margin-bottom: 1vh;
+        }
+        .silder .info .libel{
+            padding: 15px;
+        }
+        .silder .info .detail{
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .silder .info .detail .detail_item{
+            padding: 25px;
+        }
+        .silder .info .detail .detail_item .detpers{
+          font-size: 14PX;
+          margin-top: 12px;
+        }
+        .silder .info .detail .detail_item .detpers p{
+            color: rgb(222, 222, 222);
+        }
+        .silder .info .detail .detail_item .detbtn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 10vw;
+        }
+        .silder .info .detail .detail_item .detbtn button{
+            background: transparent;
+            border: solid 1px white;
+            margin-left: 12px;
+            padding: 7px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .silder .info .detail .detail_item .detbtn button img{
+            width: 22px;
+        }
+        .silder .info .detail .detail_item .detstart{
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="allcontent">
+        <div class="form">
+          <div class="tilte">
+            <span><img src="icons8-carte-mentale-50.png" alt=""></span>
+            <span> Untilted UI</span>
+          </div>
+          <div class="form_items">
+            <div class="title">
+                <h1>Welcome back, Olivia</h1>
+                <span>Welcome back! Please enter your details.</span>
+            </div>
+            <div class="btnG">
+                <button><span><img src="icons8-logo-google-48.png" alt=""></span><span>Log in with Google    </span></button>
+            
+            </div>
+            <div class="separ">
+            <p><hr></p>
+            <span >or</span>
+            </div>
+            <div class="form_item">
+             <form action="">
+                <span>
+                <input type="email" class="email" placeholder="Email">
+               </span>
+               <span>
+                <input type="password" class="Password" placeholder="Password">
+                </span>
+                <div class="formplus">
+                    <div>
+                    <input type="checkbox" name="remb" id=""> Remember for 30 days
+                    </div>
+                    <div>
+                   <a href=""> Forget Password</a>
+                    </div>
+                </div>
+                <div class="formbtn">
+                    <button>Log in</button>
+                </div>
+                <div class="sign">
+                    <span><h4> Don't have an account? </h4></span>
+                    <p><h4> Sign up for free</h4></p>
+                </div>
+               </span>
+             </form>
+            </div>
+                
+          </div>
+        </div>
+        <div class="silder">
+          <div class="info">
+            <div class="libel">
+                <h1>
+                    We move 10x faster than our peers and stat consistent.While they're bogged
+                    down with design debt, we're releasingnew feature.
+                </h1>
+            </div>
+            <div class="detail">
+                <div class="detail_item">
+                    <div class="detstart">
+                        <i class="start">&starf;</i>
+                        <i class="start">&starf;</i>
+                        <i class="start">&starf;</i>
+                        <i class="start">&starf;</i>
+                        <i class="start">&starf;</i>
+                    </div>
+                    <div class="detbtn">
+                      <div>
+                        <button><img src="icons8-flèche-gauche-30.png" alt=""></button>
+                      </div>
+                      <div>
+                        <button><img src="icons8-flèche-droite-32.png" alt=""></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="detail_item">
+                    <div class="detnom">
+                        <h1>Sophia Hall</h1>
+                    </div>
+                    <div class="detpers">
+                        <h2>Founder,catalog</h2>
+                        <p>Web design, Agency<p>
+                    </div>
+                </div>
+            </div>
+          </div> 
+        </div>
+    </div>
+</body>
+</html>
